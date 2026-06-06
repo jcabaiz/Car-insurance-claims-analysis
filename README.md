@@ -1,64 +1,60 @@
-# Car Insurance Claim & Risk Portfolio Analysis
+# Car Insurance Claim Analysis
 
-## 📌 Project Overview
-As an aspiring data analyst, I developed this project to analyze a car insurance portfolio consisting of **2,002 unique policyholders**. The objective was to uncover key demographic and policy-related risk drivers, analyze premium distribution, and identify factors contributing to the portfolio's **21.43% claim rate**.
-
-This project features an interactive **Power BI Dashboard** and a tailored **Slide Deck** designed to communicate data insights to stakeholders for corporate risk mitigation.
+An end-to-end data analysis project investigating driver demographics, policy types, and premium configurations to identify key risk factors and optimize portfolio profitability.
 
 ---
 
-## 📊 Interactive Dashboard Preview
-![Power BI Dashboard Preview](screenshots/dashboard_preview.png)
+## 📌 Problem Statement
+Our insurance portfolio is currently experiencing an overall claim rate of **21.43%** across its customer base. When a claim event occurs, the financial impact is substantial, resulting in an average payout of **$34,622**. 
+
+High-frequency or high-cost claim events within specific coverage tiers and demographic groups threaten to compress corporate profit margins. The primary objective of this project is to analyze asset concentration, policy types, and driver demographics to uncover the core drivers of these claims, allowing stakeholders to precisely calibrate premium pricing and implement strategic risk-mitigation plans.
 
 ---
 
-## 📈 Key Business Metrics (Baseline)
-* **Total Policies Evaluated:** 2,002 unique customers
-* **Overall Portfolio Claim Rate:** 21.43%
+## 📊 Data
+The analysis evaluates a dataset representing **2,002 unique policies** (total customers). The operational baseline metrics calculated from this dataset include:
+
+* **Total Policies:** 2,002
+* **Portfolio Claim Rate:** 21.43%
 * **Average Monthly Premium:** $1,859
-* **Average Cost Per Claim:** $34,622
+* **Average Claim Amount:** $34,622 (among claimants only)
+---
+
+## 🛠️ Methodology and Tools
+To ensure data integrity and create an impactful presentation for stakeholders, a streamlined two-step data pipeline was utilized:
+
+1.  **Data Cleaning & Preprocessing (Microsoft Excel):**
+    * Inspected the raw dataset for missing values, structural inconsistencies, and anomalies.
+    * **Handling Missing Data:** Applied **median imputation** to fill missing numerical values across variables, protecting the dataset from rows being aggressively dropped while preserving the overall distribution shape.
+2.  **Data Visualization & Modeling (Power BI):**
+    * Imported the clean dataset into Power BI to build an interactive analytical dashboard.
+    * Utilized DAX to construct core KPIs (Total Policies, Claim Rate, Average Premium, and Average Claim Amount).
+    * Engineered responsive visual assets including donut charts, horizontal bar charts, and age-distribution area graphs to segment risk profiles cleanly.
 
 ---
 
-## 🔍 Core Insights Uncovered
+## 🔍 Insights
+* **The Coverage Disparity:** Standard coverage policyholders generated the highest absolute number of claim events (**143 claims**), outperforming Basic (**131 claims**) and Comprehensive (**124 claims**). This points to an unfavorable risk-selection bias where riskier drivers heavily prefer mid-tier coverage.
 
-### 1. High Liability in the "Standard" Tier
-While common intuition might suggest that highest-tier comprehensive plans experience more volume, the data revealed that the **Standard Coverage** tier generated the highest absolute number of claims (**143 claims**), followed by Basic (**131**) and Comprehensive (**124**). This suggests a potential risk-concentration bias in mid-tier product selections.
+  <img width="476" height="232" alt="image" src="https://github.com/user-attachments/assets/13c3d1f9-af09-4762-978e-04c6379f6ae8" />
 
-### 2. Collision Dominance
-Nearly half of all insurance payouts (**49.71%**) stem directly from vehicle **Collisions**. This completely dwarfs other operational risks like Theft (20.52%), Weather (12.83%), and Fire (9.13%).
+* **Primary Risk Driver:** Vehicle **Collisions** are the undisputed driver of financial liability, accounting for **49.71%** (nearly half) of all claim reasons. This drastically outpaces Theft (20.52%) and Weather (12.83%).
+  <img width="477" height="233" alt="image" src="https://github.com/user-attachments/assets/a4d6274d-3e6d-4b20-b169-416c2e68920a" />
 
-### 3. Asset Concentration
-The portfolio is heavily exposed to two vehicle types: **Sedans (29.77%)** and **SUVs (28.97%)**. Combined, they represent roughly **59%** of the entire policy volume, meaning any pricing changes here will heavily influence overall profitability.
-
-### 4. Demographic Premium Volatility
-Mapping average monthly premiums against age highlighted sharp premium peaks near **$2,500** for drivers in their early 20s, a stabilization period ($1,500 - $1,800) during mid-life, and a steady climb back toward **$2,000+** for drivers surpassing 60 years old.
+* **Premium Volatility by Age:** Premium structures show severe volatility across age brackets. Average premiums spike near **$2,500** for young drivers (early 20s), flatten out to a steady valley ($1,500 - $1,800) during middle-age, and climb back up toward **$2,000+** for drivers over 60.
+  
+  <img width="853" height="248" alt="image" src="https://github.com/user-attachments/assets/0cc6735d-94fe-4d5e-8400-fc20879c87f9" />
 
 ---
 
-## 💡 Strategic Recommendations
-1.  **Introduce Safety-Driven Telematics:** Implement minor premium discounts or tracking incentives for claim-free periods to explicitly target and reduce the **49.71% collision rate**.
-2.  **Audit Mid-Tier Pricing Rules:** Review underwriting boundaries for the "Standard" coverage tier to determine if premiums adequately reflect its high-frequency claim volume.
-3.  **Smooth Age-Bracket Premium Curves:** Standardize age-based pricing algorithms to reduce sharp volatility and optimize rates for senior age demographics.
+## 💡 Recommendations
+1.  **Introduce Telematics & Safety Incentives:** Because collisions make up **49.71%** of our claims, introducing small, opt-in premium discounts for safe driving metrics or claim-free milestone years will directly incentivize lower accident rates.
+2.  **Audit the Standard Coverage Underwriting:** Standard coverage is seeing an absolute peak of **143 claims**. We should review our underwriting guidelines and pricing model for this specific tier to ensure its premium yields adequately offset the high frequency of risk.
+3.  **Smooth Age-Bracket Premium Curves:** Address the age premium volatility curve. Standardizing the mathematical models for extreme age groups (under 25 and over 60) will create more predictable revenue pipelines and improve pricing competitiveness among safe senior drivers.
 
 ---
 
 ## 📂 Repository Contents
-* `/dashboard`: Contains the original `.pbix` Power BI file.
-* `/presentation`: Contains the custom HTML/CSS slide deck (`index.html`) and the complete presenter script.
-* `/screenshots`: High-resolution captures of the analytical dashboard.
-
----
-
-## 🛠️ Tools Used
-* **Power BI:** Data visualization, modeling, and dashboard construction.
-* **DAX:** Basic measures to compute claims metrics.
-* **HTML5/CSS3:** Used to build a clean, custom presentation slide deck.
-* **Markdown:** Project documentation.
-
----
-
-## 🧑‍💻 Connect with Me
-* **LinkedIn:** [Your Name](Your LinkedIn URL)
-* **Portfolio Website:** [Your Website URL]
-* **Email:** [Your Email Address]
+* `data/` - Placeholder for the raw/cleaned data files.
+* `dashboard/` - Contains the final `.pbix` Power BI dashboard file.
+* `presentation/` - HTML slide deck and supporting presentation scripts.
