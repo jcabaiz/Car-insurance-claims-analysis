@@ -52,9 +52,3 @@ To ensure data integrity and create an impactful presentation for stakeholders, 
 2.  **Audit the Standard Coverage Underwriting:** Standard coverage is seeing an absolute peak of **143 claims**. We should review our underwriting guidelines and pricing model for this specific tier to ensure its premium yields adequately offset the high frequency of risk.
 3.  **Smooth Age-Bracket Premium Curves:** Address the age premium volatility curve. Standardizing the mathematical models for extreme age groups (under 25 and over 60) will create more predictable revenue pipelines and improve pricing competitiveness among safe senior drivers.
 
----
-
-## 📂 Repository Contents
-* `data/` - Placeholder for the raw/cleaned data files.
-* `dashboard/` - Contains the final `.pbix` Power BI dashboard file.
-* `presentation/` - HTML slide deck and supporting presentation scripts.
