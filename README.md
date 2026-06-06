@@ -54,8 +54,6 @@ To ensure data integrity and create an impactful presentation for stakeholders, 
 
 ---
 
----
-
 ## 🏁 Conclusion
 This portfolio analysis underscores a critical operational reality: profitability in car insurance is driven less by macroeconomic shifts and more by precision underwriting and demographic risk management. By isolating key metrics across 2,002 policyholders, this real-world analysis exposes an adverse selection problem within our product line. 
 
